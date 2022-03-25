@@ -1,0 +1,80 @@
+hello its rishabh i have made a python project healthy programmer 
+as you all know that programmers are always working on desktop and not take care of their health, to rid of this problem i have made a programme named healthy programmer fully through python 
+so lets get started 
+# -------------------------------HEALTHY PROGRAMMER----------------------------
+import datetime
+from pygame import mixer 
+import time
+
+abc=10
+acb=10
+
+def file(a,b):
+    f=open(a,'a')
+    f.write(b)
+    f.close
+
+
+def mix(a):
+    mixer.init()
+    mixer.music.load(a)
+    mixer.music.set_volume(0.7)
+    mixer.music.play()
+
+date1=datetime.datetime.now()
+    
+def eyes():
+    
+    while True:
+        mix('eyes.mp3')
+        query=input('enter eydone if done  ')
+        if query=='eydone':
+            file('eydone.txt',f'\n eyes exercise done {date1}')
+            mixer.music.pause()
+            time.sleep(2)
+            mixer.music.unpause()
+            global acb
+            acb=acb-1
+        
+            if acb==0:
+                print('your task has been completed ')
+                break
+        else:
+            print('invalid syntax')
+            continue
+            
+        mix('exercise.mp3')
+        query=input('enter exdone if done  ')
+        if query=='exdone':
+            file('exercise.txt',f'\n exercise done {date1}')
+            mixer.music.pause()
+            time.sleep(2)
+            mixer.music.unpause()
+            global abc
+            abc=abc-1
+            if abc==0:
+                print('your task has been completed ')
+                break
+
+        else:
+            print('invalid syntax')
+            continue
+            
+        mix('water1.mp3')
+        query=input('enter drank if done  ')
+        if query=='drank':
+            file('water drink.txt',f'\n water drank {date1}')
+            mixer.music.pause()
+            time.sleep(2)
+            mixer.music.unpause()
+            bcab=10
+            bcab=bcab-1
+            if bcab==0:
+                print('your task has been completed ')
+                break
+        else:
+            print('invalid syntax')
+            continue
+
+
+eyes()
